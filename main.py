@@ -98,8 +98,11 @@ model = NearestNeighbors(algorithm='brute')
 model.fit(movie_sparce)
 
 if __name__ == '__main__':
-    suggestions = predict(movie_index=238)
-    print('\n')
+    movie_name = 'Adventures Of Priscilla, Queen Of The Desert, The (1994)'
+    
+    suggestions = predict(movie_name=movie_name)
+    
+    print(f'\nMovie: {movie_name}\n\nSuggestions:')
     for movie in suggestions:
         print(f'→ {movie}')
     print('\n')
